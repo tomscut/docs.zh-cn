@@ -43,6 +43,7 @@ mysql> select bitmap_to_string(sub_bitmap(bitmap_from_string('1,1,3,1,5,3,5,7,7,
 
 示例二：从偏移量 0 开始，输出 bitmap 值中 100 个不重复的元素。由于 bitmap 值中没有 100 个元素，所以输出符合条件的所有元素。
 
+```Plain Text
 mysql> select bitmap_to_string(sub_bitmap(bitmap_from_string('1,1,3,1,5,3,5,7,7,9'), 0, 100)) value;
 +-----------+
 | value     |
